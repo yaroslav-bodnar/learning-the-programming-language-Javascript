@@ -1,0 +1,21 @@
+body {
+	width: 100%;
+	height: 900px;
+	margin: 0;
+	background: url(../img/fon.png) center no-repeat;
+	background-size: cover;
+}
+
+.main-background {
+	width: 100%;
+	height: 928px;
+	margin: 0;
+	padding: 0;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+	text-align: center;
+	font-size: 100px;
+	margin: 0;
+}

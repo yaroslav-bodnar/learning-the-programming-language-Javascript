@@ -87,3 +87,23 @@ var buySomeBreadT = function(eggs) {
 };
 
 console.log(buySomeBreadT(false));
+
+
+
+
+
+
+//_________________________РЕШЕНИЕ СЛЕДУЮЮЩЕЙ ЗАДАЧИ___________________
+//1. Взять любой предмет из раковины
+//2. Помыть его и отложить в сторону
+//3. Если в раковине еще что-то есть - повторить
+var washNextItem = function(itemsLeft) {
+	itemsLeft--;
+	console.log('В раковине осталось ' + itemsLeft + ' предметов');
+
+	if (itemsLeft > 0) {
+		washNextItem(itemsLeft);
+	}
+};
+
+washNextItem(10);

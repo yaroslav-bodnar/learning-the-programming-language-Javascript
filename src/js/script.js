@@ -35,8 +35,9 @@ var calculateDistanceF = function() {
 	var distanceOfSecondCyclistF = speedOfSecondCyclistF * timeF;
 	var totalDistanceF = distanceOfFirstCyclistF + distanceOfSecondCyclistF;
 	return totalDistanceF;
+	//возвращает всей функции значение равно результату выполнения алгоритма
 };
-//запуск функции:
+//запуск функции и ее вывод в консоль:
 console.log(calculateDistanceF());
 
 
@@ -103,7 +104,125 @@ var washNextItem = function(itemsLeft) {
 
 	if (itemsLeft > 0) {
 		washNextItem(itemsLeft);
+	// это действие когда функция повторяеться внутри функции называеться "рекурсия"
 	}
 };
 
 washNextItem(10);
+
+
+
+
+
+
+//______________________ЦИКЛИЧНЫЙ ОПЕРАТОР_______________
+//позволяет сократить размер кода при использовании рекурсии
+var washItems1 = function(itemsLeft1) {
+	while (itemsLeft1-- > 0) {
+		console.log('В раковине осталось ' + itemsLeft1 + ' предметов');
+	}
+};
+
+washItems1(10); 
+
+
+
+
+
+
+//__________________________МАССИВ__________________
+var numbers = [1, 2, 3, 4];
+
+console.log(numbers[Math.floor(Math.random() * numbers.length)]);
+//Math.floor - округляет вниз
+//Math.random - возвращает любое число из масива
+//numbers.length - общик количество элементов в масиве
+
+
+
+//тип данных "Строка" с использованием специальных символов
+console.log('\tHello, I\'m a string\n');
+
+
+
+
+
+
+
+
+//=====================================ПРАКТИКА============================
+console.log('==============ПРАКТИКА==============');
+
+
+
+//ПРОСТОЙ АЛГОРИТМ
+var firstChicken = 12;
+var secondChicken = 15;
+var totalChickenEggs = firstChicken + secondChicken;
+
+console.log(totalChickenEggs);
+
+
+
+
+
+
+
+//ПРОСТАЯ ФУНКЦИЯ
+var firstThing = 'maybe ';
+var secondThing  = 1;
+
+var theFirst = function() {
+	return totalThings = firstThing + secondThing;
+};
+
+console.log(theFirst());
+
+
+
+
+
+//ПРОСТАЯ ФУНКИЯ С ПРИМЕНЕНИЕМ ПАРАМЕТРОВ КОТОРЫЕ МОЖНО МЕНЯТЬ
+var theSecond = function(goodSecondApple, badSecondApple) {
+	return togetherApples = goodSecondApple + badSecondApple;
+};
+
+console.log(theSecond(2, 15));
+
+
+
+//ПРИВИДЕНИ ТИПОВ
+console.log('10' / 2);
+console.log('10' + 2);
+console.log(parseInt('10', 10) + 2);
+console.log(parseInt('10', 20) + 2);
+console.log(+ '10');
+console.log(+ '10.2');
+console.log(parseFloat('13.4') + 2);
+console.log(10.0.toString());
+
+
+
+
+//СОЗДАНИЕ ПРОСТОЙ ФУНКЦИИ РЕШЕНИЕ КОТОРОЙ ПРОХОДИТ С ПОМОЩЬЮ ЛОГИЧЕСКОГО ОПЕРАТОРА
+//ЕСЛИ В КОМНАТЕ ГОРИТ СВЕТ - ВЫКЛЮЧИТЬ, А ЕСЛИ НЕ ГОРИТ - ВКЛЮЧИТЬ
+var lightInTheRoom = function(light) {
+	if (light) {
+		return 'turn off';
+	} else {
+		return 'turn on';
+	}
+};
+
+console.log(lightInTheRoom(true));
+console.log(lightInTheRoom(false));
+
+
+
+//УПРОЩЕННЫЙ ВАРИАНТ РЕШЕНИЯ ТОЙ ЖЕ ЗАДАЧИ (ФУНКЦИИ) ТОЛЬКО С ИСПОЛЬЗОВАНИЕМ ТЕРНАРНОГО ОПЕРАТОРА
+var lightInTheSecondRoom = function(light) {
+	return light ? 'turn off' : 'turn on';
+};
+
+console.log(lightInTheSecondRoom(true));
+console.log(lightInTheSecondRoom(false));

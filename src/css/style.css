@@ -19,3 +19,7 @@ h1 {
 	font-size: 100px;
 	margin: 0;
 }
+
+#canvas4 {
+	border: solid 3px green;
+}

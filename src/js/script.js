@@ -226,3 +226,82 @@ var lightInTheSecondRoom = function(light) {
 
 console.log(lightInTheSecondRoom(true));
 console.log(lightInTheSecondRoom(false));
+
+
+
+
+
+
+
+
+
+
+
+
+//=====================РАБОТА С ГРАФИКОЙ CANVAS======================
+//DOM элемент канваса
+var canvas = document.getElementById('canvas');
+
+//Контектс отрисовки
+var ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'lightgreen';
+//заливка канваса
+ctx.fillRect(0, 0, 300, 150);
+//размер и положение канваса
+
+
+//МОЖНО ЗАЛИВАТЬ НЕ СПЛОШНОЙ ЦВЕТ А ГРАДИЕНТ
+var canvas2 = document.getElementById('canvas2');
+var ctx2 = canvas2.getContext('2d');
+
+var gradient = ctx2.createLinearGradient(0, 0, 300, 150);
+gradient.addColorStop(0, 'lightgreen');
+gradient.addColorStop(1, 'rgba(0, 255, 0, 0)');
+
+ctx2.fillStyle = gradient;
+ctx2.fillRect(0, 0, 300, 150);
+
+
+//для очистки холста используется метод:
+//ctx.clearRect(0, 0, 300, 150);
+
+
+
+
+//РАБОТА С СЛОЖНЫМИ ФИГУРАМИ
+var canvas3 = document.getElementById('canvas3');
+var ctx3 = canvas3.getContext('2d');
+
+ctx3.beginPath();
+//так задается начало контура, все что будет нарисовано между вызовами будет считатсья одной фигурой
+ctx3.moveTo(100, 100);
+//перемещение фигуры
+ctx3.lineTo(80, 60);
+//отрисовувает линию с послудней точки на которой мы остановились
+ctx3.lineTo(110, 80);
+ctx3.lineTo(125, 40);
+ctx3.lineTo(140, 80);
+ctx3.lineTo(170, 60);
+ctx3.lineTo(150, 100);
+ctx3.lineTo(150, 100);
+ctx3.bezierCurveTo(140, 90, 110, 90, 100, 100);
+//замыкание фигуры с помощью кривой Безье
+ctx3.closePath();
+ctx3.stroke();
+//вызов метода stroke - нарисует обводку и трисовку всех фигур
+ctx3.fill();
+//заливка фигуры
+
+
+
+
+
+//РАБОТА С ТЕКСТОМ
+var canvas4 = document.getElementById('canvas4');
+var ctx4 = canvas4.getContext('2d');
+
+ctx4.font = '30px Tahoma';
+ctx4.textBaseLine = 'hanging';
+ctx4.fillText('Привет я из текста', 0, 40);
+ctx4.fillText('в канвасе', 0, 70);

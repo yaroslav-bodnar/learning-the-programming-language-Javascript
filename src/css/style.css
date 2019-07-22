@@ -23,3 +23,28 @@ h1 {
 #canvas4 {
 	border: solid 3px green;
 }
+
+
+.pool-1{
+	background: lightgray;
+	min-width: 500px;
+	min-height: 300px;
+}
+
+.pool-2{
+	background: lightgray;
+	margin-top: 20px;
+	min-width: 500px;
+	min-height: 300px;
+}
+
+.el {
+	width: 70px;
+	height: 70;
+	display: inline-block;
+	border: solid 3px blue;
+	margin: 20px;
+	padding: 20px;
+	font-size: 40px;
+	text-align: center;
+}

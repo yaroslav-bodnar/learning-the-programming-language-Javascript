@@ -305,3 +305,28 @@ ctx4.font = '30px Tahoma';
 ctx4.textBaseLine = 'hanging';
 ctx4.fillText('Привет я из текста', 0, 40);
 ctx4.fillText('в канвасе', 0, 70);
+
+
+
+
+
+//==============================СОЗДАНИЕ DOM-ЭЛЕМЕНТОВ======================
+var pool = document.querySelector('.pool');
+
+var seventhElementHTML = '<div class="el el-7"><span>6</span></div>';
+
+pool.insertAdjacentHTML('beforeEnd', seventhElementHTML);
+//можно использовать метод insertAdjacentText, только в этом случае создается только текст
+
+
+
+//создание DOM элемента
+var pools = document.querySelectorAll('.pool');
+
+var template = document.querySelector('#element-template').content.querySelector('div');
+
+for (var i = 0; i < 8; i ++) {
+	var element = template.cloneNode(true);
+	element.children[0].textContent = i;
+	pools[1].appendChild(element);
+}

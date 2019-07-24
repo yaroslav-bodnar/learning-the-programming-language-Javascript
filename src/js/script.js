@@ -330,3 +330,43 @@ for (var i = 0; i < 8; i ++) {
 	element.children[0].textContent = i;
 	pools[1].appendChild(element);
 }
+
+
+
+
+
+
+
+
+//=====================ЗАПУСК АСИНХРОННОГО КОДА НА ПРИМЕРЕ СОБЫТИЙ================
+var button = document.getElementById('button_for_click');
+
+button.addEventListener('click', function() {
+	alert('Hello from first handler');
+});
+
+
+
+
+
+//=============================ОБРАБОТКА СОБЫТИЙ==========================
+// var bodyMain = querySelector('.main-background');
+// console.log(bodyMain);
+// var mainUl = bodyMain.querySelector('.pop-up_menu');
+// var mainUlList1 = mainUl.querySelector('.pop-up_menu__list1')
+
+
+
+var windowPopUp = document.querySelector('.pop-up');
+var windowPopUpForm = document.querySelector('.pop-up__window');
+var windowPopUpOpen = document.querySelector('.pop-up_menu__list1');
+var windowClose = document.querySelecrtor('.pop-up__window__close');
+
+
+windowPopUpOpen.addEventListener('click', function() {
+	windowPopUp.classList.remove('hidden');
+});
+
+windowClose.addEventListener('click', function() {
+	windowPopUp.classList.add('hidden');
+});

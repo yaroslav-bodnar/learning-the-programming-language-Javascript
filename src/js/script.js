@@ -350,17 +350,11 @@ button.addEventListener('click', function() {
 
 
 //=============================ОБРАБОТКА СОБЫТИЙ==========================
-// var bodyMain = querySelector('.main-background');
-// console.log(bodyMain);
-// var mainUl = bodyMain.querySelector('.pop-up_menu');
-// var mainUlList1 = mainUl.querySelector('.pop-up_menu__list1')
-
-
 
 var windowPopUp = document.querySelector('.pop-up');
 var windowPopUpForm = document.querySelector('.pop-up__window');
+var windowClose = windowPopUpForm.querySelector('.pop-up__window__close');
 var windowPopUpOpen = document.querySelector('.pop-up_menu__list1');
-var windowClose = document.querySelecrtor('.pop-up__window__close');
 
 
 windowPopUpOpen.addEventListener('click', function() {

@@ -5,13 +5,13 @@
 	<title>JavaScript</title>
 	<link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body class="title alt discription">
 	<section class="main-background">
-		<ul class="pop-up_menu">
+		<ul class="pop-up_menu" id="firstTag">
 			<li class="pop-up_menu__list1"><a href="#">menu_1</a></li>
 			<li class="pop-up_menu__list2"><a href="#">menu_2</a></li>
 		</ul>
-		<h1>
+		<h1 class="title">
 			Practice working with the language "JavaScript"
 		</h1>
 	</section>
@@ -23,20 +23,7 @@
 		</div>
 	</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<p class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error magni similique dicta. <b>Sint labore perspiciatis fugiat praesentium minus dolorem</b> reprehenderit <i>sapiente animi rerum quos aut ab natus officia facilis</i> ipsum eos error cupiditate, quis explicabo in dolore! Doloribus, iusto, amet.</p>
 
 
 
@@ -47,9 +34,7 @@
 
 	<canvas id="canvas3"></canvas>
 
-	<canvas id="canvas4"></canvas>
-
-
+	<canvas id="canvas4" width="1000"></canvas>
 
 
 
@@ -70,17 +55,40 @@
 
 	</div>
 
+	<div class="pool pool-3">
+
+	</div>
 
 
-	<template id="element-template">
+<!-- тег template используется для копирования структуры и заполнения ее через JavaScript -->
+	<template id="element-template"> 
 		<div class="el el-1">
-			<span><!-- Номер елемента --></span>
+			<span></span>
 		</div>
 	</template>
+
+
+
+
 
 	<section class="section_for_button">
 		<button id="button_for_click">Click me!</button>
 	</section>
+
+
+
+
+	<div id="first">
+		<div id="second">
+			<div id="third">
+				<button id="clickable">Click me!</button>
+			</div>
+		</div>
+	</div>
+
+
+
+
 
 	<!-- This place is used to connect "script". Before closing tag </body> -->
 	<script src="./js/script.js"></script>

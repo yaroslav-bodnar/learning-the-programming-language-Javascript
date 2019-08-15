@@ -1,11 +1,15 @@
-//Решение простой задачи на вычысление расстояния с выводом на консоль
 
-//Задаем переменным  имена и исходные значения
+console.log('==============ПРАКТИКА==============');
+
+
+
+
+//_____________АЛГОРИТМ________________
+//Задаем переменным имена и исходные значения
 var time = 3;
 var speedOfFirstCyclist = 12;
 var speedOfSecondCyclist = 14;
 
-//_____________АЛГОРИТМ________________
 //найти расстояние которое проехал 1-й 
 var distanceOfFirstCyclist = speedOfFirstCyclist * time;
 
@@ -20,6 +24,103 @@ console.log(totalDistance);
 
 
 
+//ПРОСТОЙ АЛГОРИТМ
+var firstChicken = 12;
+var secondChicken = 15;
+var totalChickenEggs = firstChicken + secondChicken;
+
+console.log(totalChickenEggs);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log ("======================Функция===============================");
+//========================================================================= Функция ==========================================================================================
+var timeMan = 3;
+var firstMan = 5;
+var secondMan = 10;
+
+var calculateDistanceMan = function () {
+	var distanceFirstMan = firstMan * timeMan;
+	var distanceSecondMan = secondMan * timeMan;
+	var totalDistanceMan = distanceFirstMan + distanceSecondMan;
+	return totalDistanceMan;
+};
+
+console.log(calculateDistanceMan());
+
+
+//====================================
+
+
+var calculateDistanceWoman = function (timeWoman, firstWoman, secondWoman) {
+	var distanceFirstWoman = firstWoman * timeWoman;
+	var distanceSecondWoman = secondWoman * timeWoman;
+	var totalDistanceWoman = distanceFirstWoman + distanceSecondWoman;
+	return totalDistanceWoman;
+};
+
+console.log (calculateDistanceWoman(10, 12, 14));
+
+
+var firstDistanceWoman = calculateDistanceWoman(5, 4, 8);
+var secondDistanceWoman = calculateDistanceWoman(6, 4, 12);
+console.log (firstDistanceWoman, secondDistanceWoman);
+
+
+//====================================
+
+
+//СОЗДАНИЕ ПРОСТОЙ ФУНКЦИИ РЕШЕНИЕ КОТОРОЙ ПРОХОДИТ С ПОМОЩЬЮ ЛОГИЧЕСКОГО ОПЕРАТОРА
+//ЕСЛИ В КОМНАТЕ ГОРИТ СВЕТ - ВЫКЛЮЧИТЬ, А ЕСЛИ НЕ ГОРИТ - ВКЛЮЧИТЬ
+var lightInTheRoom = function(light) {
+	if (light) {
+		return 'turn off';
+	} else {
+		return 'turn on';
+	}
+};
+
+console.log(lightInTheRoom(true));
+console.log(lightInTheRoom(false));
+
+
+//====================================
+
+
+//УПРОЩЕННЫЙ ВАРИАНТ РЕШЕНИЯ ТОЙ ЖЕ ЗАДАЧИ (ФУНКЦИИ) ТОЛЬКО С ИСПОЛЬЗОВАНИЕМ ТЕРНАРНОГО ОПЕРАТОРА
+var lightInTheSecondRoom = function(light) {
+	return light ? 'turn off' : 'turn on';
+};
+
+console.log(lightInTheSecondRoom(true));
+console.log(lightInTheSecondRoom(false));
+
+
+//====================================
 
 
 //_________________ФУНКЦИЯ________________
@@ -42,7 +143,7 @@ console.log(calculateDistanceF());
 
 
 
-
+//======================================
 
 
 
@@ -58,40 +159,36 @@ var calculateDistanceF2 = function(timeF2, speedOfFirstCyclistF2, speedOfSecondC
 console.log(calculateDistanceF2(24, 26, 32));
 
 
+//======================================
 
 
 
+//ПРОСТАЯ ФУНКЦИЯ
+var firstThing = 'maybe ';
+var secondThing  = 1;
 
-
-//____________________ЛОГИЧЕСКИЙ ОПЕРАТОР_________________
-//Создание функции на основе условия: "если в магазине есть яйца купить 10 булок хлеба, а если яиц нету то купить 1 булку хлеба"
-var buySomeBread = function(eggs) {
-	if (eggs) {
-		return 10;
-	} else {
-		return 1;
-	}
+var theFirst = function() {
+	return totalThings = firstThing + secondThing;
 };
 
-console.log(buySomeBread(true));
+console.log(theFirst());
 
 
 
+//======================================
 
 
 
-
-//_________________ТЕРНАРНЫЙ ОПЕРАТОР______________
-//создание той же функции buySomeBread только задавая следующий оператор
-var buySomeBreadT = function(eggs) {
-	return eggs ? 10 : 1;
+//ПРОСТАЯ ФУНКИЯ С ПРИМЕНЕНИЕМ ПАРАМЕТРОВ КОТОРЫЕ МОЖНО МЕНЯТЬ
+var theSecond = function(goodSecondApple, badSecondApple) {
+	return togetherApples = goodSecondApple + badSecondApple;
 };
 
-console.log(buySomeBreadT(false));
+console.log(theSecond(2, 15));
 
 
 
-
+//=====================================
 
 
 //_________________________РЕШЕНИЕ СЛЕДУЮЮЩЕЙ ЗАДАЧИ___________________
@@ -115,6 +212,236 @@ washNextItem(10);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//===========================================================================================================================================================
+console.log('===============================ОПЕРАТОРЫ====================');
+
+console.log(true ? "Больше" : "Меньше");
+console.log(false ? "Больше" : "Меньше");
+
+
+
+//=================================
+
+//_________________ТЕРНАРНЫЙ ОПЕРАТОР______________
+var buySomeBreadT = function(eggs) {
+	return eggs ? 10 : 1;
+};
+
+console.log(buySomeBreadT(false));
+
+
+//===================================
+
+//для проверки типа значения можно использовать оператор "typeof"
+console.log(typeof (1 + 2));
+console.log(typeof ("строчный " + "тип данных"));
+console.log(typeof ('stringJS' + 2));
+
+
+//нахождение остатка от деления
+console.log(10 % 3);
+console.log(17 % 3);
+
+
+//динамическое приведение типов
+console.log('10' / 2);
+console.log( '10' - 2);
+console.log('10' + 2);
+
+
+
+
+
+//явное приведение типов : строка к числу - метод 'parseInt'
+console.log(parseInt('10') + 2);
+console.log(parseInt('10', 10) + 2); //явно указываем систему счисления
+console.log(parseInt('10', 20) + 2); //явно указываем систему счисления
+
+//явное приведение типов : строка к дробному числу - метод 'parseFloat'
+console.log(parseFloat('10.2') + 2);
+
+//явное приведение типов : с помощью унарного оператора
+console.log(+ "10.2");
+
+
+
+//=================================
+
+
+
+//ПРИВИДЕНИ ТИПОВ
+console.log('=====================ПРИВИДЕНИЕ ТИПОВ================');
+console.log('10' / 2);
+console.log('10' + 2);
+console.log(parseInt('10', 10) + 2);
+console.log(parseInt('10', 20) + 2);
+console.log(+ '10');
+console.log(+ '10.2');
+console.log(parseFloat('13.4') + 2);
+console.log(10.0.toString());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==============================================================================================================================================================
+console.log('======================УСЛОВНЫЕ ОПЕРАТОРЫ======================');
+
+var cashFromStore = function(cash) {
+	if (cash > 200) {
+		return "Домой можно забрать 100 долларов";
+	} if (cash == 200) {
+		return "Домой можно забрать 50 долларов";
+	} else {
+		return "Нельзя домой сегодня брать деньги";
+	};
+};
+
+console.log(cashFromStore(200));
+
+
+//=====================================
+
+
+//____________________ЛОГИЧЕСКИЙ ОПЕРАТОР_________________
+//Создание функции на основе условия: "если в магазине есть яйца купить 10 булок хлеба, а если яиц нету то купить 1 булку хлеба"
+var buySomeBread = function(eggs) {
+	if (eggs) {
+		return 10;
+	} else {
+		return 1;
+	}
+};
+
+console.log(buySomeBread(true));
+
+
+
+
+var buySomeBread2 = function(eggs) {
+	if (eggs < 20) {
+		return 11;
+	} else if (eggs > 10) {
+		return 15;
+	} else {
+		return 1;
+	}
+};
+
+console.log(buySomeBread2(9));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==========================================================================================================================================================
+console.log('======================Циклические алгоритмы======================');
+//взять открытку со стола
+//прочитать и отложить
+//если остались еще открытки - повторить
+
+
+var postcardsOnTable = function(postcard) {
+	postcard --;
+	console.log('На столе осталось ' + postcard + ' открытки!');
+
+	if (postcard > 0){
+		postcardsOnTable(postcard);
+	}
+};
+
+postcardsOnTable(4);
+
+
+
+
+//исользование встроеного в язык циклического оператора 'while'
+var postcardsInTable = function(postcards) {
+	while (postcards-- > 0) {
+		console.log('В столе осталось ' + postcards + ' открытки!');
+	}
+};
+
+postcardsInTable(4);
+
+
+
 //______________________ЦИКЛИЧНЫЙ ОПЕРАТОР_______________
 //позволяет сократить размер кода при использовании рекурсии
 var washItems1 = function(itemsLeft1) {
@@ -130,13 +457,78 @@ washItems1(10);
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//==========================МАССИВЫ=============================================================================================================================
+console.log('======================МАССИВЫ======================');
+
+console.log(['мой возраст: ' + 26 + 'лет', 'у меня светлые волосы', 'мой рост: ' + 186 + 'см']);
+
+var namesMan = ['Саша', 'Коля', 'Ваня', 'Дима'];
+
+console.log('Имя второго человека: ' + namesMan[1]);
+
+namesMan[1] = 'Дядя Петя'; //присовения нового значения
+console.log('Имя второго человека: ' + namesMan[1]);
+
+//узнать сколько елементов в массиве - специальное поле length
+console.log('В массиве всего ' + namesMan.length + ' имени!');
+
+var numbersMans = [1, 2, 3, 6, 7, 8];
+console.log('В массиве всего ' + numbersMans.length + ' чисел!');
+
+
+
+
+
+
+var bag = [
+	["яблоко", "груша", "виноград", "сливы"],
+	["хлеб", "печенье", "булка"],
+	["вино", "шампанское", "текила"]
+];
+
+console.log(bag);
+
+var fruits = bag[0];
+console.log(fruits);
+
+var bread = bag[1];
+console.log(bread);
+
+var alcohol = bag[2];
+console.log(alcohol);
+
+console.log(alcohol[1]);
+console.log(fruits[2]);
+
+
 //__________________________МАССИВ__________________
 var numbers = [1, 2, 3, 4];
 
 console.log(numbers[Math.floor(Math.random() * numbers.length)]);
 //Math.floor - округляет вниз
 //Math.random - возвращает любое число из масива
-//numbers.length - общик количество элементов в масиве
+//numbers.length - общие количество элементов в масиве
 
 
 
@@ -150,17 +542,6 @@ console.log('\tHello, I\'m a string\n');
 
 
 
-//=====================================ПРАКТИКА============================
-console.log('==============ПРАКТИКА==============');
-
-
-
-//ПРОСТОЙ АЛГОРИТМ
-var firstChicken = 12;
-var secondChicken = 15;
-var totalChickenEggs = firstChicken + secondChicken;
-
-console.log(totalChickenEggs);
 
 
 
@@ -168,64 +549,41 @@ console.log(totalChickenEggs);
 
 
 
-//ПРОСТАЯ ФУНКЦИЯ
-var firstThing = 'maybe ';
-var secondThing  = 1;
-
-var theFirst = function() {
-	return totalThings = firstThing + secondThing;
-};
-
-console.log(theFirst());
 
 
 
 
 
-//ПРОСТАЯ ФУНКИЯ С ПРИМЕНЕНИЕМ ПАРАМЕТРОВ КОТОРЫЕ МОЖНО МЕНЯТЬ
-var theSecond = function(goodSecondApple, badSecondApple) {
-	return togetherApples = goodSecondApple + badSecondApple;
-};
-
-console.log(theSecond(2, 15));
 
 
 
-//ПРИВИДЕНИ ТИПОВ
-console.log('10' / 2);
-console.log('10' + 2);
-console.log(parseInt('10', 10) + 2);
-console.log(parseInt('10', 20) + 2);
-console.log(+ '10');
-console.log(+ '10.2');
-console.log(parseFloat('13.4') + 2);
-console.log(10.0.toString());
+//==========================ЦИКЛЫ===============================================================================================================================
+console.log('======================ЦИКЛЫ======================');
 
 
 
+//упрощение цикла с помощью конструкции "while"
+var printsNames = function (names) {
+	var index = 0;
 
-//СОЗДАНИЕ ПРОСТОЙ ФУНКЦИИ РЕШЕНИЕ КОТОРОЙ ПРОХОДИТ С ПОМОЩЬЮ ЛОГИЧЕСКОГО ОПЕРАТОРА
-//ЕСЛИ В КОМНАТЕ ГОРИТ СВЕТ - ВЫКЛЮЧИТЬ, А ЕСЛИ НЕ ГОРИТ - ВКЛЮЧИТЬ
-var lightInTheRoom = function(light) {
-	if (light) {
-		return 'turn off';
-	} else {
-		return 'turn on';
+	while (index < names.length) {
+		console.log("Элемент " + index + ': ' + names[index]);
+		index = index + 1;
 	}
 };
 
-console.log(lightInTheRoom(true));
-console.log(lightInTheRoom(false));
+printsNames(["Гена", "Саша", "Коля", "Ваня", "Валя", "Маша"]);
 
 
-
-//УПРОЩЕННЫЙ ВАРИАНТ РЕШЕНИЯ ТОЙ ЖЕ ЗАДАЧИ (ФУНКЦИИ) ТОЛЬКО С ИСПОЛЬЗОВАНИЕМ ТЕРНАРНОГО ОПЕРАТОРА
-var lightInTheSecondRoom = function(light) {
-	return light ? 'turn off' : 'turn on';
+console.log('-----------------------')
+//еще лучше упрощение с помощью конструкции "for"
+var printsForNames = function (names) {
+	for ( var i = 0; i < names.length; i++) {
+		console.log("Элемент " + i + ': ' + names[i]);
+	}
 };
 
-console.log(lightInTheSecondRoom(true));
-console.log(lightInTheSecondRoom(false));
+printsForNames(["Гена", "Саша", "Коля", "Ваня", "Валя", "Маша"]);
 
 
 
@@ -238,7 +596,238 @@ console.log(lightInTheSecondRoom(false));
 
 
 
-//=====================РАБОТА С ГРАФИКОЙ CANVAS======================
+
+
+
+
+
+
+
+
+
+
+
+
+
+//================================================================================================================================================================
+console.log('======================ОБЬЕКТЫ======================');
+
+var emptyObject = {};
+console.log(emptyObject);
+
+
+
+
+var wizard = {
+	name: 'Hendalf',
+	age: 72,
+	female: false,
+	color: 'white',
+	wizardsBag: ['посох', 'кулак', 'фаербол'],
+	'wizards bag': ['посох', 'кулак', 'фаербол'],
+	otherObject: {
+		name: 'Sauron',
+		age: 80,
+		color: 'black'
+	}
+};
+
+console.log(wizard);
+console.log(wizard.name);
+console.log(wizard.wizardsBag[2]);
+console.log(wizard['wizards bag'][1]);
+console.log(wizard.otherObject.name);
+
+wizard.age = 84;
+console.log(wizard.age);
+
+wizard.level = 100;
+console.log(wizard.level);
+
+
+
+
+
+
+
+
+//циклы в обьектах
+
+var wizardAlianced = {
+	'friend1': 'Radagast',
+	'friend2': 'Sarumyan',
+	'friend3': 'Pokemon'
+};
+
+for (var i = 1; i <= 3; i++) {
+	var wizardNames = wizardAlianced['friend' + i];
+	console.log(wizardNames);
+};
+
+
+console.log('---------------------');
+
+
+var badWizards = {
+	'wizard1': 'Saruman',
+	'wizard2': 'Woldemort',
+	'wizard3': 'Sirin',
+	'wizard4': 'Belatrys'
+};
+
+for (var i = 1; i <= 4; i++) {
+	console.log(badWizards['wizard' + i]);
+};
+
+
+
+
+
+//МЕТОД - это функция в обьектах
+
+var myWizard = {
+	name: 'Hendalf',
+	age: 72,
+	level: 2,
+	color: 'white',
+
+	say: function() {
+		console.log(myWizard.name + ' говорит: "Ты не пройдешь! Мой уровень: ' + myWizard.level + '"');
+	},
+
+	levelUp: function(level) {
+		myWizard.level += level;
+	}
+};
+
+
+myWizard.say();
+myWizard.levelUp(3);
+myWizard.say();
+
+
+
+console.log('--------------------------')
+
+
+
+var myWizard = {
+	name: 'Hendalf',
+	age: 72,
+	level: 4,
+	color: 'white',
+
+	say: function() {
+		console.log(myWizard.name + ' говорит: "Ты не пройдешь! Мой уровень: ' + myWizard.level + '"');
+	},
+
+	levelUp: function(level) {
+		myWizard.level += level;
+	},
+
+
+	friends: {
+		name: 'Harry Potter',
+		age: 19,
+		level: 2,
+
+		sayHarry: function() {
+			console.log('Привет, меня зовут ' + myWizard.friends.name);
+			console.log('Мой уровень: ' + myWizard.friends.level);
+		},
+
+		levelUpHarry: function(level) {
+			myWizard.friends.level += level;
+		}
+	}
+};
+
+
+myWizard.say();
+myWizard.levelUp(3);
+myWizard.say();
+
+myWizard.friends.sayHarry();
+
+
+
+
+
+console.log('---------------------')
+
+
+
+
+
+var myWizard = {
+	name: 'Hendalf',
+	age: 72,
+	level: 4,
+	color: 'white',
+
+	say: function() {
+		console.log(myWizard.name + ' говорит: "Ты не пройдешь! Мой уровень: ' + myWizard.level + '"');
+	},
+
+	levelUp: function(level) {
+		myWizard.level += level;
+	},
+
+
+	friends: {
+		name: 'Harry Potter',
+		age: 19,
+		level: 4,
+
+		sayHarry: function() {
+			console.log('Привет, меня зовут ' + this.name); //переменная this указывает на текущий обьект у которого мы вызвали функцию
+			console.log('Мой уровень: ' + this.level); //переменная this указывает на текущий обьект у которого мы вызвали функцию
+		},
+
+		levelUpHarry: function(level) {
+			this.level += level; //переменная this указывает на текущий обьект у которого мы вызвали функцию
+		}
+	}
+};
+
+
+myWizard.say();
+myWizard.levelUp(3);
+myWizard.say();
+
+myWizard.friends.sayHarry();
+myWizard.friends.levelUpHarry(2);
+myWizard.friends.sayHarry();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('====================РАБОТА С ГРАФИКОЙ CANVAS========================')
+//=======================================================================РАБОТА С ГРАФИКОЙ CANVAS========================================================================
 //DOM элемент канваса
 var canvas = document.getElementById('canvas');
 
@@ -310,26 +899,267 @@ ctx4.fillText('в канвасе', 0, 70);
 
 
 
-//==============================СОЗДАНИЕ DOM-ЭЛЕМЕНТОВ======================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('==========================СОЗДАНИЕ и РАБОТА С DOM ЭЛЕМЕНТАМИ=====================')
+//==============================================================================СОЗДАНИЕ И РАБОТА С DOM-ЭЛЕМЕНТАМИ============================================================================
+//выводит все DOM дерево документа в консоль
+for (var i = 0; i < document.children.length; i++) {
+	console.log(document.children[i]);
+}
+
+
+//===================================
+
+
+
+//узнать имя текущего элемента================
+// for (var i = 0; i <= document.children.length; i++) {
+// 	var child = document.children[i];
+
+// 	console.log('Имя элемента ' + i + ': ' + child.tagName);
+
+// 	console.log('Этот элемент HTML: ' + (child.tagName.toLowerCase() === 'html'));
+// }
+
+
+
+//==========================
+
+
+
+// var html = document.children[0];
+
+// for (var i = 0; i <= html.children.length; i++) {
+// 	var child = html.children[i];
+// 	console.log(child.tagName.toLowerCase());
+
+// 	for (var j = 0; j <= child.children.length; j++) {
+// 		var innerChild = child.children[j];
+// 		console.log('|---' + innerChild.tagName.toLowerCase());
+// 	}
+// }
+
+
+
+//практика вывода отдельных элементов в консоль
+var html = document.children[0];
+var htmlHead = html.children[0];
+var htmlBody = html.children[1];
+
+console.log(htmlHead.children[2]);
+console.log(htmlBody.children[0]);
+console.log(htmlBody.children.length);
+
+
+
+
+
+//==================================
+
+
+
+
+
+//методы доступа к документу
+var firstTag = document.children[0].children[1].children[0].children[0];
+console.log(firstTag.tagName.toLowerCase());
+
+
+console.log(firstTag === document.getElementById('firstTag')); //доступ через id
+console.log(firstTag === document.querySelector('.pop-up_menu')); //доступ через class
+
+
+
+
+
+
+//=================================
+
+
+
+
+
+
+//методы getAttribute и setAttribute возвращают и (добавляют или изменяют) 
+//значение указаного атрибута элемента
+var pageHeading = document.querySelector('h1');
+pageHeading.setAttribute('style', 'color: green;'); //изменяет стиль текста
+
+console.log(pageHeading.getAttribute('class')); //возвращает значение атрибута
+
+
+
+/*Большинство HTML-атрибутов доступны в виде свойств DOM-элемента, и к ним можно обращатся напрямую. 
+Исключение составляют те атрибуты, названия которых являются ключевыми или зарезервироваными для будущих версий словами JS,
+например class или for у лейблов. Чтобы обратиться к классу нужно воспользоваться свойством 'className', а чтобы прочитать лейбл,
+нужно воспользоваться свойством 'htmlFor'*/
+
+var pageHeading = document.querySelector('h1');
+
+console.log(pageHeading.className);
+
+pageHeading.className = 'myTitle'; //изменил имя класа в теге h1
+console.log(pageHeading.className);
+
+
+
+
+
+
+console.log('-------------------------');
+//=================================
+
+
+
+
+
+
+// обьект 'classList' помогает работать с атрибутами нескольких классов
+var pageHeading = document.querySelector('h1');
+
+pageHeading.classList.add('myclass'); //добавляет класс
+console.log(pageHeading.className);
+
+pageHeading.classList.remove('myTitle'); //удаляет класс
+console.log(pageHeading.className);
+
+
+
+
+
+
+//================закрипление-практика================
+console.log('-------------------------');
+
+
+
+
+var htmlBody = document.querySelector('body');
+var htmlBodyP = htmlBody.querySelector('p');
+var htmlBodyH1 = htmlBody.querySelector('h1');
+
+console.log(htmlBody.classList);
+console.log(htmlBody.className);
+
+htmlBody.children[2].setAttribute('style', 'color: red'); //второе место в массиве может поменятся поэтому лучше:
+htmlBodyP.setAttribute('style', 'color: red');
+
+htmlBodyH1.classList.add('title', 'em'); //добавляем классы заголовку, но надо учитывать документ считывается синхронно,
+console.log(htmlBodyH1.className); // и класы добавились к первому попавшемуся h1 в теге body
+
+
+
+
+
+
+
+//===============УПРАВЛЕНИЕ ПОЛОЖЕНИЕМ DOM-элементов В ДЕРЕВЕ
+
+
+
+
+var pools = document.querySelectorAll('.pool');
+var blocks = document.querySelectorAll('.el');
+
+pools[0].removeChild(blocks[0]); // метод removeChild отсоединяет элемент из dom-дерева
+pools[1].appendChild(blocks[0]); //метод appendChild добавляет элемент в dom-дерево в конец блока
+pools[1].appendChild(blocks[1]); //не обязательно придварительно отсоединять элемент
+
+pools[1].insertBefore(blocks[3], blocks[1]); //метод insertBefore добавляет элемент в любое место перед...
+
+var replaced = pools[0].replaceChild(blocks[3], blocks[2]); // метод заменяет елементы и возвращает элемент который был заменен
+pools[1].appendChild(replaced);
+
+
+pools[0].insertBefore(blocks[2].cloneNode(true), blocks[3]); //метод cloneNode(true) клонирует элемент со всем содержимым
+pools[1].appendChild(blocks[3].cloneNode(true)); //метод cloneNode(true) клонирует элемент со всем содержимым
+
+if (pools[0].contains(blocks[2])) { //метод contains проверяет на содержание элемента
+	pools[0].style.background = 'red';
+};
+
+
+
+
+
+//=================================
+console.log('---------------------')
+
+
+
+
+
+//создание DOM элемента
+var description = document.querySelector('p');
+console.log(description.innerHTML); //возвращает всю разметку с тегами
+console.log(description.textContent); //возвращает только текстовове содержимое
+
+
+// -----------------------
+
+
+var textInHtml = document.querySelector('b');
+
+var newTextInHtml = '<i>New description for JavaScript</i>';
+
+textInHtml.textContent = newTextInHtml; //добавляем только сам текст таким каким он записан в скобках
+textInHtml.innerHTML = newTextInHtml; //добавляем содержимое в документ с учетем свойст, но так опасно, для взлома...
+
+// у такого способа есть ряд проблем, т.к. все элементы удаляются и создаются вновь каждый раз, когда мы вставляем новую разметку, поэтому используем:
+//методы 'insertAdjacentHTML' и 'insertAdjacentText' позволяют вставить разметку или текст точечно, например:
+
+
 var pool = document.querySelector('.pool');
 
 var seventhElementHTML = '<div class="el el-7"><span>6</span></div>';
 
 pool.insertAdjacentHTML('beforeEnd', seventhElementHTML);
+
 //можно использовать метод insertAdjacentText, только в этом случае создается только текст
+//метод insertAdjacentText нужно использовать в приоритете потому что с методом insertAdjacentHTML на сайт могут проникнуть злоумышленики
 
 
 
-//создание DOM элемента
+// -----------------------
+
+
+
 var pools = document.querySelectorAll('.pool');
 
-var template = document.querySelector('#element-template').content.querySelector('div');
+var template = document.querySelector('#element-template').content.querySelector('div'); //content эдинственное свойство которое хранит элемент
 
 for (var i = 0; i < 8; i ++) {
-	var element = template.cloneNode(true);
+	var element = template.cloneNode(true); // клонирование элемента со всем содержимым
 	element.children[0].textContent = i;
-	pools[1].appendChild(element);
-}
+	pools[2].appendChild(element);
+};
 
 
 
@@ -338,12 +1168,121 @@ for (var i = 0; i < 8; i ++) {
 
 
 
-//=====================ЗАПУСК АСИНХРОННОГО КОДА НА ПРИМЕРЕ СОБЫТИЙ================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('==========================ЗАПУСК АСИНХРОННОГО КОДА НА ПРИМЕРЕ СОБЫТИЙ=====================')
+//======================ОБРАБОТКА СОБЫТИЙ===========================ЗАПУСК АСИНХРОННОГО КОДА НА ПРИМЕРЕ СОБЫТИЙ======================================================================
+
 var button = document.getElementById('button_for_click');
 
+//методом addEventListener мы добавляем обработчик события который запускает функцию в даною случае после клика 'click'
 button.addEventListener('click', function() {
 	alert('Hello from first handler');
 });
+// метод addEventListener на вход принимаут три параметра:
+//1 - строковое название события - они могут быть разными
+//2 - функция обработчик (в даном случае анонимная, тоесть не подготовлена заранее, а создается сразу)
+//3  - ?
+
+
+
+
+//---------------------
+
+
+
+
+//удаление обработчика событий методом 'removeEventListener' вожно только тогда когда функция-обработчик была подготовлена заранее
+var button = document.getElementById('button_for_click');
+
+var buttonClickHandler = function() {
+	alert('Hello from second handler');
+};
+
+button.addEventListener('click', buttonClickHandler);
+
+button.removeEventListener('click', buttonClickHandler); //удаляет обработчик события
+
+
+
+
+//КАК ПРАВИЛЬНО ИМЕНОВАТЬ ОБРАБОТЧИКИ СОБЫТИЙ:
+// пример: обьект + событие + Handler (buttonClickHandler)
+// пример: on + обьект + событие (onButtonClick)
+// ИСПОЛЬЗОВАТЬ ТОЛЬКО ОДИН ИЗ СПОСОБОВ
+
+
+
+
+
+
+
+//ФАЗЫ СОБЫТИЙ ================================
+
+// var divElements = document.querySelectorAll('div');
+// var button = document.getElementById('clickable');
+// var clickedElement = null;
+
+
+// var clickHandler = function(evt) {
+// 	console.log(evt);
+
+// 	if (clickedElement) {
+// 		clickedElement.classList.remove('clicked')
+// 	}
+
+// 	clickedElement = evt.currentTarget;
+// 	clickedElement.classList.add('clicked');
+// 	debugger;
+// };
+
+
+// for (var i = 0; i < divElements.length; i++) {
+// 	divElements[i].addEventListener('click', clickHandler);
+// };
+
+// button.addEventListener('click', clickHandler);
+// document.body.addEventListener('click', clickHandler);
+
+
+
+//ФАЗА "ВСПЛЫТИЕ" И ФАЗА "ЗАХВАТ" -------- ПОТОМ К НИМ ЕЩЕ ВЕРНЕМСЯ
+
+
+
+
 
 
 
@@ -365,86 +1304,3 @@ windowClose.addEventListener('click', function() {
 	windowPopUp.classList.add('hidden');
 });
 
-
-
-
-
-//=================типы данных========================
-// console.log(n1);
-// ошибка null - это когда в коде просто не существует таких данных
-
-var elem;
-console.log(elem);
-// ошибка undefined - это когда в коде нет такого значения
-
-
-obj = {
-	name: "John",
-	age: 25,
-	isMarried: false
-}
-console.log(obj.name);
-console.log(obj["age"]);
-
-
-
-var mas = ['plum', 'orange', 'apple'];
-console.log(mas[0]);
-console.log(mas[2]);
-
-
-// alert('Hello!');
-// confirm("Are you here?");
-// это всплывающие окна
-
-// prompt('Есть ли вам 18?', '18');
-
-var answer = prompt('Есть ли вам 18?', '18');
-console.log(typeof(answer));
-
-var answerNumber = +prompt('Есть ли вам 18?', '18');
-console.log(typeof(answerNumber));
-
-
-
-//switch - используется вместо условия if и для его сокращения
-var num = 50;
-
-switch (num) {
-	case 49:
-		console.log('Мало');
-		break;
-	case 80:
-		console.log('Много');
-		break;
-	case 50:
-		console.log('В точку');
-		break;
-	default:
-		console.log('Не в этот раз');
-		break;
-}
-
-// ======================ЦЫКЛЫ===================
-while (num < 55) {
-	console.log(num);
-	num++;
-}
-
-
-do {
-	console.log(num);
-	num++
-
-}
-while (num < 55);
-
-
-
-
-
-
-
-for (let i = 0; i < 8; i++) {
-	console.log(i);
-}

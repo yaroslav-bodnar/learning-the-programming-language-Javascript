@@ -1069,7 +1069,7 @@ console.log(htmlBody.classList);
 console.log(htmlBody.className);
 
 htmlBody.children[2].setAttribute('style', 'color: red'); //второе место в массиве может поменятся поэтому лучше:
-htmlBodyP.setAttribute('style', 'color: red');
+// htmlBodyP.setAttribute('style', 'color: red');
 
 htmlBodyH1.classList.add('title', 'em'); //добавляем классы заголовку, но надо учитывать документ считывается синхронно,
 console.log(htmlBodyH1.className); // и класы добавились к первому попавшемуся h1 в теге body
@@ -1288,7 +1288,7 @@ button.removeEventListener('click', buttonClickHandler); //удаляет обр
 
 
 
-//=============================ОБРАБОТКА СОБЫТИЙ==========================
+//===============ОБРАБОТКА СОБЫТИЙ - ОТКРЫТИЕ И ЗАКРТЫТИЕ ОКНА==========================
 
 var windowPopUp = document.querySelector('.pop-up');
 var windowPopUpForm = document.querySelector('.pop-up__window');
@@ -1296,11 +1296,174 @@ var windowClose = windowPopUpForm.querySelector('.pop-up__window__close');
 var windowPopUpOpen = document.querySelector('.pop-up_menu__list1');
 
 
-windowPopUpOpen.addEventListener('click', function() {
+// windowPopUpOpen.addEventListener('click', function() {
+// 	windowPopUp.classList.remove('hidden');
+// });
+
+// windowClose.addEventListener('click', function() {
+// 	windowPopUp.classList.add('hidden');
+// });
+
+
+// //закрытие окна с помощью ESC
+// document.addEventListener('keydown', function(evt) { //обьект event передается единственным параметром в каждый из обработчиков событий
+// 	if (evt.keyCode === 27) { //свойство keyCode хранит код нажатой клавиши, в данном случае ESC - 27
+// 		windowPopUp.classList.add('hidden');
+// 	}
+// });
+
+
+// //открытие окна кнопкой Enter после того как на кнопку сайта поставлен фокус с клавиатуры
+// windowPopUpOpen.addEventListener('keydown', function(evt) {
+// 	if (evt.keyCode === 13) {
+// 		windowPopUp.classList.remove('hidden');
+// 	}
+// });
+
+
+// //закрытие окна кнопкой Enter после того как на крестик окна поставлен фокус с клавиатуры
+// windowClose.addEventListener('keydown', function(evt) {
+// 	if (evt.keyCode === 13) {
+// 		windowPopUp.classList.add('hidden');
+// 	}
+// });
+
+
+//ТОТ ЖЕ САМЫЙ КОД ТОЛЬКО УПОРЯДОЧЕНЫЙ И ЧИТАБЕЛЬНЫЙ
+
+var ESC_KEYCODE = 27;
+var ENTER_KEYCODE = 13;
+
+//--------------------
+
+var onPopupEscPress = function(evt) {
+	if (evt.keyCode === ESC_KEYCODE) {
+		closePopup();
+	}
+};
+
+
+var openPopup = function() {
 	windowPopUp.classList.remove('hidden');
+	document.addEventListener('keydown', onPopupEscPress);
+};
+
+
+var closePopup = function() {
+	windowPopUp.classList.add('hidden');
+	document.removeEventListener('keydown', onPopupEscPress);
+};
+
+//--------------------
+
+windowPopUpOpen.addEventListener('click', function() {
+	openPopup();
 });
 
-windowClose.addEventListener('click', function() {
-	windowPopUp.classList.add('hidden');
+windowPopUpOpen.addEventListener('keydown', function(evt) {
+	if (evt.keyCode === ENTER_KEYCODE) {
+		openPopup();
+	}
 });
+
+//--------------------
+
+windowClose.addEventListener('click', function() {
+	closePopup();
+});
+
+windowClose.addEventListener('keydown', function(evt) {
+	if (evt.keyCode === ENTER_KEYCODE) {
+		closePopup();
+	}
+});
+
+
+
+
+
+
+//===============ОБРАБОТКА СОБЫТИЙ - ВАЛИДАЦИЯ ФОРМЫ==========================
+//в основном использовать стандартный атрибуты HTML5, но если нужно провести сложные действия - JS
+
+
+
+
+
+//замена стандортного текста от браузера для полей формы
+var familyNameInput = document.getElementById('family-name');
+var firstNameInput = document.getElementById('first-name');
+var mailInput = document.getElementById('mail');
+
+
+//задаем текст на замену стандартному от браузера с помощью условного оператора
+familyNameInput.addEventListener('invalid', function (evt) {
+	if (familyNameInput.validity.tooShort) {
+		familyNameInput.setCustomValidity('Фамилия должна состоять минимум из 2-х символов');
+	} else if (familyNameInput.validity.tooLong) {
+		familyNameInput.setCustomValidity('Фамилия не должна превышать 25-ть символов');
+	} else if (familyNameInput.validity.valueMissing) {
+		familyNameInput.setCustomValidity('Обязательное поле');
+	} else {
+		familyNameInput.setCustomValidity(''); //не забыть сбросить значение поля, если это значение стало корректно
+	}
+});
+
+firstNameInput.addEventListener('invalid', function (evt) {
+	if (firstNameInput.validity.tooShort) {
+		firstNameInput.setCustomValidity('Имя должно состоять минимум из 2-х символов');
+	} else if (firstNameInput.validity.tooLong) {
+		firstNameInput.setCustomValidity('Имя не должно превышать 25-ти символов');
+	} else if (firstNameInput.validity.valueMissing) {
+		firstNameInput.setCustomValidity('Обязательное поле');
+	} else {
+		firstNameInput.setCustomValidity(''); //не забыть сбросить значение поля, если это значение стало корректно
+	}
+});
+
+mailInput.addEventListener('invalid', function (evt) {
+	if (mailInput.validity.tooShort) {
+		mailInput.setCustomValidity('Имя email должно состоять минимум из 2-х символов');
+	} else if (mailInput.validity.tooLong) {
+		mailInput.setCustomValidity('Имя email не должно превышать 45-ти символов');
+	} else if (mailInput.validity.valueMissing) {
+		mailInput.setCustomValidity('Обязательное поле');
+	} else {
+		mailInput.setCustomValidity(''); //не забыть сбросить значение поля, если это значение стало корректно
+	}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log('=====================================ПЕРЕТАСКИВАНИЕ======================================')
+//=======================================================================ПЕРЕТАСКИВАНИЕ=====================================================
+
+var buttonHandle = document.querySelector('section_for_button');
 

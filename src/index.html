@@ -8,7 +8,7 @@
 <body class="title alt discription">
 	<section class="main-background">
 		<ul class="pop-up_menu" id="firstTag">
-			<li class="pop-up_menu__list1"><a href="#">menu_1</a></li>
+			<li class="pop-up_menu__list1" tabindex="0">user-form</li>
 			<li class="pop-up_menu__list2"><a href="#">menu_2</a></li>
 		</ul>
 		<h1 class="title">
@@ -18,8 +18,45 @@
 
 	<section class="pop-up hidden">
 		<div class="pop-up__window">
-			<span class="pop-up__window__close">&#10006;</span>
-			<h3>Здесь будет форма или другой тип данных\информации</h3>
+			<span class="pop-up__window__close" tabindex="0">&#10006;</span>
+
+			<form 	class="setup-form"
+					action="#"
+					method="post"
+					enctype="multipart/form-data"
+					autocomplete="off">
+				
+				<fieldset>
+
+					<p class="blocks-form">
+						<label class="label-form" for='family-name'>Введите в поле Вашу фамилию:</label>
+							<input 	id="family-name" 
+									type="text" name= "username"
+									minlength="2" maxlength="25" required
+									placeholder="Введите фамилию...">
+					</p>
+					<p class="blocks-form">
+						<label class="label-form" for='first-name'>Введите в поле Ваше имя:</label>
+							<input 	id="first-name" 
+									type="text" name= "username"
+									minlength="2" maxlength="25" required
+									placeholder="Введите имя...">
+					</p>
+					<p class="blocks-form">
+						<label class="label-form" for='mail'>Введите в поле Ваш адрес почтового ящика:</label>
+							<input 	id="mail" 
+									type="email" name= "mail"
+									minlength="2" maxlength="45" required
+									placeholder="Введите mail...">
+					</p>
+					<p class="blocks-form-submit">
+							<input 	id="submit" 
+									type="submit" value="Отправить">
+					</p>
+
+				</fieldset>
+
+			</form>
 		</div>
 	</section>
 
@@ -78,13 +115,13 @@
 
 
 
-	<div id="first">
+<!-- 	<div id="first">
 		<div id="second">
 			<div id="third">
 				<button id="clickable">Click me!</button>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 

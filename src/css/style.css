@@ -73,9 +73,24 @@ h1 {
 	transform: translateX(-50%);
 }
 
-.pop-up__window span {
+.pop-up__window__close {
 	margin-left: 735px;
 	cursor: pointer;
+}
+
+.form_mousemove {
+	text-align: center;
+}
+
+.form_mousemove_pic {
+	width: 40px;
+	border: solid blue 1px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.form_mousemove_text {
+	font-weight: 700;
 }
 
 .hidden {
@@ -138,9 +153,9 @@ h1 {
 	width: 100%;
 	min-height: 500px;
 	margin-top: 50px;
-	display: flex;
+	/*display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: center;*/
 }
 
 
